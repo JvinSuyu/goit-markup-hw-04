@@ -5,49 +5,10 @@ a {
 
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
+h1,h2,h3,h4,h5,h6 {
     text-transform: capitalize;
-}
-
-h1 {
-    font-size: 64px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 48px;
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 32px;
-    font-weight: 500;
-}
-
-h4 {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-h5 {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-h6 {
-    font-size: 16px;
-    font-weight: 500;
 }
 
 button {
@@ -56,7 +17,7 @@ button {
     cursor: pointer;
 }
 
-p {
+.teams-item-position {
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -64,20 +25,14 @@ p {
     line-height: 1.5;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
 
 ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
 :root {
     --iris: #4D5AE5;
-    --oceana: #404BBF;
+    --ocean: #404BBF;
     --navyblue: #2E2F42;
     --green: #31D0AA;
     --slate: #434455;
@@ -91,20 +46,18 @@ ul {
 }
 
 .container {
-    max-width: 1158px;
+    width: 1158px;
     margin: 0 auto;
 }
-
 .header {
+    padding: 24px 0;
     border-bottom: 1px solid var(--cornflower);
-    background: var(--white);    
 }
-.main-header-container{
+.header-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 24px 40px;
+    background: var(--white);
 }
 main {
     display: block;
@@ -166,37 +119,25 @@ main {
 }
 
 /* main section*/
-.hero {
-    justify-content: center;
-    align-items: center;
+.hero{
     flex-direction: column;
     gap: 40px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),url(../images/office.jpg);
-    height: 600px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office.jpg);
+    padding: 188px 0;
 }
-
-.section {
+.section{
     display: flex;
-    margin: 0;
-    width: 100%;
-    height: auto;
-}
-
-.section-about {
-    display: flex;
-    margin: 0;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    height: auto;
 }
-
-.title {
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.02em;
     text-align: center;
     color: var(--white);
-    margin-top: 188px;
 }
-
 .hero-button {
     font-size: 16px;
     font-weight: 500;
@@ -207,7 +148,8 @@ main {
     background: var(--iris);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition: all 0.1s ease-in-out;
-    margin-bottom: 188px;
+    margin: 48px auto 0;
+    display: block;
 }
 
 .hero-button:hover {
@@ -220,14 +162,13 @@ main {
 }
 .about{
     flex-direction: column;
-    gap: 32px;
-    padding: 120px 40px;
+    padding: 120px 0;
 }
 .about-title {
     text-align: center;
     color: var(--navyblue);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 40px;
 }
 
@@ -241,17 +182,29 @@ main {
 .about-list-item {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    text-align: left;
+    gap: 20px;
 }
 
 .about-list-item h3 {
     color: var(--navyblue);
 }
 
-.about-list-item p {
+.about-item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+.teams-item-name{
+    font-size: 22px;
+    color: var(--navyblue);
+}
+.about-item-description{
     font-size: 16px;
-    color: var(--slate);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
 }
 .about-list-item-img{
     height: 112px;
@@ -263,19 +216,18 @@ main {
     align-items: center;
 }
 .services {
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 32px;
-    padding: 0 40px 120px;
+    padding-bottom: 120px;
 }
 
 .services-title {
-    text-align: center;
     color: var(--navyblue);
-    font-size: 32px;
+    margin-bottom: 72px;
+    font-size: 36px;
     font-weight: 700;
-    margin-bottom: 40px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .services-list {
@@ -287,19 +239,18 @@ main {
 
 .teams {
     flex-direction: column;
-    padding: 120px 40px;
+    padding: 120px 0;
     background-color: var(--cloud);
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
 }
 
 .teams-title {
     text-align: center;
     color: var(--navyblue);
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
-    margin-bottom: 40px;
+    line-height: 40px;
+    margin-bottom: 72px;
+    letter-spacing: 0.02em;
 }
 
 .teams-list {
@@ -314,15 +265,12 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 32px;
     background: var(--white);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -331,17 +279,20 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin-bottom: 32px;
+    padding: 32px 16px;
     width: 100%;
-    width: 232px;
 }
 
-.teams-list-item h3 {
+.teams-item-name {
     font-size: 20px;
     color: var(--navyblue);
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
-.team-list-item p {
+.teams-item-position{
     font-size: 16px;
     color: var(--slate);
 }
@@ -352,12 +303,15 @@ main {
     gap: 24px;
 }
 .social-list-item{
-    width: 30px;
-    height: 30px;
-    padding: 7px;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
     background: var(--iris);
     border-radius: 50%;
     cursor: pointer;
+}
+.teams-social-list li:hover {
+    background-color: var(--green);
 }
 .social-list-img{
     fill: var(--cloud);
@@ -392,15 +346,22 @@ main {
     justify-content: center;
     align-items: center;
 }
+.customers-list-item:hover {
+    border: 1px solid var(--ocean);
+}
 .customers-list-item-img{
     width: 100%;
     fill: var(--lightslate);
+}
+.customers-list-item-img:hover {
+    fill: var(--ocean);
 }
 /* Portfolio Header, Main and Footer */
 
 .portfolio {
     flex-direction: column;
     padding-top: 96px;
+    padding-bottom: 120px;
 }
 
 .portfolio-title {
@@ -439,8 +400,10 @@ main {
 }
 
 .filter-list-item .filter-buttons:hover {
-    background: var(--cornflower);
-    color: var(--iris);
+    background: var(--ocean);
+    color: var(--white);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+    border-color: var(--ocean);
 }
 
 .filter-list-item .filter-buttons:active {
@@ -452,7 +415,6 @@ main {
     border: none;
     background: var(--iris);
     color: var(--white);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .portfolio-list {
@@ -462,7 +424,6 @@ main {
     align-items: center;
     row-gap: 48px;
     column-gap: 24px;
-    margin-bottom: 120px;
 }
 
 .portfolio-list-item {
@@ -473,62 +434,87 @@ main {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
+.list-app-content{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
 .portfolio-list-item:hover {
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .portfolio-list-item img {
-    width: 100%;
     object-fit: cover;
 }
 
 .portfolio-list-item .list-item-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 30px 20px;
+    gap: 8px;
+    padding: 32px 16px;
     border-bottom: 1px solid var(--cornflower);
     border-left: 1px solid var(--cornflower);
     border-right: 1px solid var(--cornflower);
 }
 
-.list-item-content h3 {
-    font-size: 20px;
+.list-item-card-content {
     color: var(--navyblue);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
 }
 
-.list-item-content p {
+.list-item-app {
+    color: var(--slate);
     font-size: 16px;
-    color: var(--slate, #434455);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
 }
-
-.footer-logo {
+.footer{
+    background:var(--navyblue);
+    width: 100%;
+    padding-top: 101.5px;
+    padding-bottom: 100px;
+}
+.footer-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+}
+.webstudio{
+    display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
 }
-.f-logo{
+.footer-logo {
     color: var(--white);
     font-family: "Raleway", sans-serif;
     font-size: 22px;
-    font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
 }
-.f-logo-span {
+.footer-logo-span {
     color: var(--iris);
 }
-.f-logo-text  {
+.f-logo-text {
     font-size: 16px;
     color: var(--cloud);
-    width: 264px;
     line-height: 1.2;
-    margin-top: 20px;
+    margin-top: 16px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: left;
 }
-.footer-social{
+.social-media{
+    display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -536,24 +522,31 @@ main {
 }
 .footer-social-title{
     font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
     color: var(--white);
 }
-.footer-social-list{
+
+.footer-social-list {
     display: inline-flex;
     align-items: flex-start;
     gap: 16px;
     margin-top: 20px;
 }
-.footer-social-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
     background: var(--iris);
     border-radius: 50%;
     cursor: pointer;
 }
-.footer-social-list-img{
-    width: 100%;
+
+.footer-social-list-img {
     fill: var(--cloud);
+}
+
+.footer-social-item:hover {
+    background: var(--green);
 }
