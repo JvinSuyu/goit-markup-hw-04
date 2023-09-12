@@ -167,8 +167,8 @@ main {
 }
 
 .hero-button:hover {
-    background: var(--cornflower);
-    color: var(--iris);
+    background: var(--ocean);
+    color: var(--white);
 }
 
 .hero-button:active {
